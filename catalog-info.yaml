@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: l2io6i205-nodejs-gitops
+  description: This is GitOps manifest for l2io6i205-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: l2io6i205-nodejs
+    janus-idp.io/tekton: l2io6i205-nodejs
+    backstage.io/kubernetes-id: l2io6i205-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:l2io6i205-nodejs
